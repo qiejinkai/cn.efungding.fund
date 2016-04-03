@@ -1,18 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context="cn.efunding.fund.MainActivity">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.efunding.fund.activity.MessageActivity">
 
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/fund_red"
+        app:subtitleTextColor="@color/fund_red"
         android:title=""
         android:id="@+id/toolbar">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="返回"
+            android:textSize="18dp"
+            android:id="@+id/btn_back_main"
+            android:textColor="@color/fund_white"
+            android:background="@drawable/back"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -24,11 +34,10 @@
             android:id="@+id/bar_title"
             />
     </android.support.v7.widget.Toolbar>
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="this is main activity"/>
+        android:text="this is message activity"/>
 
 
 </LinearLayout>

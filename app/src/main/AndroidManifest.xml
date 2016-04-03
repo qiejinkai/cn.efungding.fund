@@ -25,6 +25,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.MainActivity"></activity>
+        <activity android:name=".activity.MessageActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".activity.MainActivity">
+
+            </meta-data>
+        </activity>
     </application>
 
 </manifest>
