@@ -30,6 +30,10 @@
 
             </meta-data>
         </activity>
+        <activity android:name=".activity.ActivityActivity"/>
+        <activity android:name=".activity.MeActivity"/>
+        <activity android:name=".activity.HelpActivity"/>
+        <activity android:name=".activity.SettingsActivity"/>
     </application>
 
 </manifest>

@@ -13,9 +13,9 @@ import cn.efunding.fund.R;
 /**
  * Created by qiejinkai on 16/4/3.
  */
-public class MessageActivity extends AppCompatActivity {
+public class SettingsActivity extends AppCompatActivity {
 
-    private int bar_title = R.string.bar_message_title;
+    private int bar_title = R.string.bar_settings_title;;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -36,7 +36,7 @@ public class MessageActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MessageActivity.this, MainActivity.class));
+                startActivity(new Intent(SettingsActivity.this, MeActivity.class));
                 finish();
                 overridePendingTransition(R.animator.in_from_left_500, R.animator.out_to_left);
             }

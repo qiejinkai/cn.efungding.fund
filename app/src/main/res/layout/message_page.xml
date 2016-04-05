@@ -7,33 +7,12 @@
     android:layout_height="match_parent"
     tools:context="cn.efunding.fund.activity.MessageActivity">
 
-    <android.support.v7.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/fund_red"
-        app:subtitleTextColor="@color/fund_red"
-        android:title=""
-        android:id="@+id/toolbar">
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:text="返回"
-            android:textSize="18dp"
-            android:id="@+id/btn_back_main"
-            android:textColor="@color/fund_white"
-            android:background="@drawable/back"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#fdfdfd"
-            android:textSize="18dp"
-            android:layout_gravity="center"
-            android:layout_centerInParent="true"
-            android:id="@+id/bar_title"
-            />
-    </android.support.v7.widget.Toolbar>
+    <include layout="@layout/commen_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_height"
+        android:layout_alignParentTop="true"
+        ></include>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

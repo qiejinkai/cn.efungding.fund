@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="cn.efunding.fund.ac">
+
+    <include layout="@layout/commen_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_height"
+        android:layout_alignParentTop="true"
+        ></include>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="this is help activity"
+        android:layout_centerInParent="true"/>
+
+    <include layout="@layout/commen_footer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/footer_height"
+        android:layout_alignParentBottom="true"
+        ></include>
+
+
+</RelativeLayout>

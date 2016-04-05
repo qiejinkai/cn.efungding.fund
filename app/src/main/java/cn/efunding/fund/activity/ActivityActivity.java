@@ -4,8 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -13,16 +11,18 @@ import android.widget.TextView;
 
 import cn.efunding.fund.R;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+/**
+ * Created by qiejinkai on 16/4/5.
+ */
+public class ActivityActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private int bar_title = R.string.bar_home_title;
-    private int [] footer_images = {R.drawable.home_selected,R.drawable.activity,R.drawable.me,R.drawable.help};
+    private int bar_title = R.string.bar_activity_title;
+    private int [] footer_images = {R.drawable.home,R.drawable.activity_selected,R.drawable.me,R.drawable.help};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_page);
-
+        setContentView(R.layout.activity_page);
         initBar();
         initFooter();
     }
@@ -57,45 +57,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-
-        getMenuInflater().inflate(R.menu.main,menu);
-        return true;
-
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.action_message:
-                startActivity(new Intent(MainActivity.this, MessageActivity.class));
-                //finish();
-                overridePendingTransition(R.animator.in_from_right_500,R.animator.out_to_left);
-                break;
-        }
-
-
-        return super.onOptionsItemSelected(item);
-    }
-
-    @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_home:
+                startActivity(new Intent(ActivityActivity.this, MainActivity.class));
+                //finish();
+                overridePendingTransition(R.animator.in_from_left,R.animator.out_to_left);
                 break;
             case R.id.btn_activity:
-                startActivity(new Intent(MainActivity.this, ActivityActivity.class));
-                //finish();
-                overridePendingTransition(R.animator.in_from_right,R.animator.out_to_left);
 
                 break;
             case R.id.btn_me:
-                startActivity(new Intent(MainActivity.this, MeActivity.class));
+                startActivity(new Intent(ActivityActivity.this, MeActivity.class));
                 //finish();
                 overridePendingTransition(R.animator.in_from_right,R.animator.out_to_left);
                 break;
             case R.id.btn_help:
-                startActivity(new Intent(MainActivity.this, HelpActivity.class));
+                startActivity(new Intent(ActivityActivity.this, HelpActivity.class));
                 //finish();
                 overridePendingTransition(R.animator.in_from_right,R.animator.out_to_left);
                 break;

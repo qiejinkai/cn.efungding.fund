@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:clickable="false"
+    android:textAlignment="center"
+    android:touchscreenBlocksFocus="false"
+    android:transitionGroup="false"
+    android:nestedScrollingEnabled="true"
+    android:background="@color/fund_background"
+    >
+
+    <ImageButton
+        android:layout_marginTop="@dimen/footer_marginTop"
+        android:layout_marginBottom="@dimen/footer_marginBottom"
+        android:id="@+id/btn_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/home_selected"
+        android:layout_weight="1"
+        android:background="@color/fund_background"
+        android:scaleType="fitCenter"
+        />
+    <ImageButton
+        android:layout_marginTop="@dimen/footer_marginTop"
+        android:layout_marginBottom="@dimen/footer_marginBottom"
+        android:id="@+id/btn_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/activity"
+        android:layout_weight="1"
+        android:background="@color/fund_background"
+        android:scaleType="fitCenter"
+        />
+    <ImageButton
+        android:layout_marginTop="@dimen/footer_marginTop"
+        android:layout_marginBottom="@dimen/footer_marginBottom"
+        android:id="@+id/btn_me"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/me"
+        android:background="@color/fund_background"
+        android:scaleType="fitCenter"
+        android:layout_weight="1"/>
+    <ImageButton
+        android:layout_marginTop="@dimen/footer_marginTop"
+        android:layout_marginBottom="@dimen/footer_marginBottom"
+        android:id="@+id/btn_help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/help"
+        android:background="@color/fund_background"
+        android:scaleType="fitCenter"
+        android:layout_weight="1"/>
+
+
+
+</LinearLayout>
