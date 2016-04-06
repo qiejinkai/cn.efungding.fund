@@ -1,15 +1,25 @@
 package cn.efunding.fund.activity;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.TextView;
+
+import com.handmark.pulltorefresh.library.PullToRefreshBase;
+import com.handmark.pulltorefresh.library.PullToRefreshListView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import cn.efunding.fund.R;
 
@@ -18,6 +28,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private int bar_title = R.string.bar_home_title;
     private int [] footer_images = {R.drawable.home_selected,R.drawable.activity,R.drawable.me,R.drawable.help};
 
+    private PullToRefreshListView plv;
+    private ArrayAdapter<String> data;
+
+    private AdapterView views;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +42,40 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         initBar();
         initFooter();
+        plv = (PullToRefreshListView) findViewById(R.id.lv);
+        List<String> list = new ArrayList<String>();
+        data = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, list);
+        plv.setAdapter(data);
+
+        plv.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener<ListView>() {
+            @Override
+            public void onRefresh(PullToRefreshBase<ListView> refreshView) {
+
+                new AsyncTask<Void, Void, Void>() {
+
+                    @Override
+                    protected Void doInBackground(Void... params) {
+
+                        try {
+                            Thread.sleep(2000);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        return null;
+                    }
+
+                    @Override
+                    protected void onPostExecute(Void aVoid) {
+
+                        data.add("wangzhe");
+                        data.add("zhanglong");
+                        plv.onRefreshComplete();
+                    }
+                }.execute();
+            }
+        });
+
+
     }
 
     private void initBar(){

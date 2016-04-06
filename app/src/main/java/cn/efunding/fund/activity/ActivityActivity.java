@@ -25,6 +25,15 @@ public class ActivityActivity extends AppCompatActivity implements View.OnClickL
         setContentView(R.layout.activity_page);
         initBar();
         initFooter();
+
+        Button btn = (Button) findViewById(R.id.btnToBanner);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ActivityActivity.this,Guide.class));
+                finish();;
+            }
+        });
     }
 
     private void initBar(){

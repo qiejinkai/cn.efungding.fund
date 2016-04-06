@@ -34,6 +34,7 @@
         <activity android:name=".activity.MeActivity"/>
         <activity android:name=".activity.HelpActivity"/>
         <activity android:name=".activity.SettingsActivity"/>
+        <activity android:name=".activity.Guide"/>
     </application>
 
 </manifest>

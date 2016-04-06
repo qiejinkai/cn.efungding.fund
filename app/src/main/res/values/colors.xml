@@ -6,4 +6,6 @@
     <color name="fund_red">#ff4e49</color>
     <color name="fund_white">#fdfdfd</color>
     <color name="fund_background">#f8f8f8</color>
+    <color name="separate_line">#e7e7e7</color>
+    <color name="separate_line2">#d5d5d5</color>
 </resources>
