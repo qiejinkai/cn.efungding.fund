@@ -175,16 +175,6 @@ public class Guide extends Activity implements ViewPager.OnPageChangeListener{
                     int position = currPosition >= list.size()-1 ? 0 : currPosition+1;
                     System.out.println("POSITION  : " + position);
                     vp.setCurrentItem(position);
-//                    if(currPosition == list.size()-1){
-//                        currPosition = position;
-//                        if(docs.size() >1 && !vpih.hasMessages(MSG_NEXT)) {
-//                            vpih.sendEmptyMessageDelayed(MSG_NEXT, waitTime);
-//                        }else if(docs.size() >1 && vpih.hasMessages(MSG_NEXT)){
-//                            vpih.removeMessages(MSG_NEXT);
-//                            vpih.sendEmptyMessageDelayed(MSG_NEXT, waitTime);
-//                        }
-//
-//                    }
                     break;
             }
         }

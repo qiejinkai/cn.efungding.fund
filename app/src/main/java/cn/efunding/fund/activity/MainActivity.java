@@ -22,30 +22,53 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cn.efunding.fund.R;
+import cn.efunding.fund.adapter.HomeAdapter;
+import cn.efunding.fund.entity.Banner;
+import cn.efunding.fund.entity.XSubject;
+import cn.efunding.fund.entity.YSubject;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+    public static final String ACTION = "cn.efunding.fund.activity.intent.action.MainActivity";
     private int bar_title = R.string.bar_home_title;
     private int [] footer_images = {R.drawable.home_selected,R.drawable.activity,R.drawable.me,R.drawable.help};
 
     private PullToRefreshListView plv;
-    private ArrayAdapter<String> data;
 
     private AdapterView views;
 
+    List<Banner> bannerList;
+    List<XSubject> xSubjectList;
+    List<YSubject> ySubjectList;
 
+    private void initData(){
+        bannerList= new ArrayList<Banner>();
+        bannerList.add(new Banner("http://fund.efunding.cn/",R.drawable.banner1));
+        bannerList.add(new Banner("http://fund.efunding.cn/",R.drawable.banner2));
+        bannerList.add(new Banner("http://fund.efunding.cn/",R.drawable.banner3));
+
+        xSubjectList= new ArrayList<XSubject>();
+        xSubjectList.add(new XSubject("新手标 1 号"));
+        xSubjectList.add(new XSubject("新手标 2 号"));
+        xSubjectList.add(new XSubject("新手标 3 号"));
+        xSubjectList.add(new XSubject("新手标 4 号"));
+
+        ySubjectList = new ArrayList<YSubject>();
+        ySubjectList.add(new YSubject("跃进宝 1 号"));
+        ySubjectList.add(new YSubject("跃进宝 2 号"));
+        ySubjectList.add(new YSubject("跃进宝 3 号"));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_page);
-
+        initData();
         initBar();
         initFooter();
         plv = (PullToRefreshListView) findViewById(R.id.lv);
-        List<String> list = new ArrayList<String>();
-        data = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, list);
-        plv.setAdapter(data);
+        HomeAdapter homeAdapter = new HomeAdapter(this,bannerList,xSubjectList,ySubjectList);
+        plv.setAdapter(homeAdapter);
 
         plv.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener<ListView>() {
             @Override
@@ -67,8 +90,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     @Override
                     protected void onPostExecute(Void aVoid) {
 
-                        data.add("wangzhe");
-                        data.add("zhanglong");
+                        //xSubjectList.add(new XSubject("新手标 5 号"));
+
+                        //ySubjectList.add(new YSubject("跃进宝 4 号"));
                         plv.onRefreshComplete();
                     }
                 }.execute();

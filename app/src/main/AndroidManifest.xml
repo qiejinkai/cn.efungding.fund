@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="cn.efunding.fund">
-
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:name="context.FundAppliaction"
         android:allowBackup="true"
@@ -24,7 +24,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.MainActivity"></activity>
+        <activity android:name=".activity.MainActivity">
+            <intent-filter>
+                <action android:name="cn.efunding.fund.activity.intent.action.MainActivity"></action>
+            </intent-filter>
+        </activity>
         <activity android:name=".activity.MessageActivity">
             <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".activity.MainActivity">
 
@@ -35,6 +39,7 @@
         <activity android:name=".activity.HelpActivity"/>
         <activity android:name=".activity.SettingsActivity"/>
         <activity android:name=".activity.Guide"/>
+        <activity android:name=".activity.WebActivity"/>
     </application>
 
 </manifest>

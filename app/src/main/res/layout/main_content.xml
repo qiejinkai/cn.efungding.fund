@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <include layout="@layout/banner_module"
         android:layout_width="match_parent"
+        android:layout_marginTop="-0.5dp"
         android:layout_height="@dimen/banner_height"
         android:layout_alignParentTop="true"
         android:id="@+id/include"></include>
     <ListView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/subject_x_list">
+        android:layout_height="match_parent"
+        android:id="@+id/x_listView">
     </ListView>
 
     <View android:layout_height="1px" android:background="@color/separate_line" android:layout_width="fill_parent"></View>
 
     <ListView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/subject_y_list"></ListView>
+        android:layout_height="match_parent"
+        android:id="@+id/y_listView"></ListView>
 </LinearLayout>
