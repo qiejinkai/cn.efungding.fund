@@ -16,7 +16,7 @@
         android:layout_alignParentTop="true"></include>
 
 
-    <cn.efunding.fund.view.RoundPregressBarView
+    <cn.efunding.fund.view.RoundProgressBarView
         android:id="@+id/roundProgressBar2"
         android:layout_width="55dp"
         android:layout_height="55dp"

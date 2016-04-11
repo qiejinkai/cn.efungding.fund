@@ -65,7 +65,7 @@
                     android:gravity="left"/>
             </LinearLayout>
 
-            <cn.efunding.fund.view.RoundPregressBarView
+            <cn.efunding.fund.view.RoundProgressBarView
                 android:layout_gravity="center"
                 android:layout_marginRight="15dp"
                 android:id="@+id/y_subject_roundProgressBar"
@@ -124,7 +124,7 @@
                 android:paddingLeft="10dp"
                 android:text="T+1计息"
                 android:textSize="12dp"/>
-            <cn.efunding.fund.view.RoundPregressBarView
+            <cn.efunding.fund.view.RoundProgressBarView
                 android:id="@+id/roundProgressBar3"
                 android:layout_width="6dp"
                 android:layout_height="6dp"

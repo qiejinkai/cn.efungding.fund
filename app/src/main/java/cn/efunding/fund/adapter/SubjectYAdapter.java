@@ -8,11 +8,10 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import java.util.List;
-import java.util.zip.Inflater;
 
 import cn.efunding.fund.R;
 import cn.efunding.fund.entity.YSubject;
-import cn.efunding.fund.view.RoundPregressBarView;
+import cn.efunding.fund.view.RoundProgressBarView;
 
 /**
  * Created by qiejinkai on 16/4/7.
@@ -53,7 +52,7 @@ public class SubjectYAdapter extends BaseAdapter {
         TextView tv = (TextView) convertView.findViewById(R.id.y_subject_tv_subject_name);
         tv.setText(ySubject.getTitle());
 
-        RoundPregressBarView bpbv = (RoundPregressBarView) convertView.findViewById(R.id.y_subject_roundProgressBar);
+        RoundProgressBarView bpbv = (RoundProgressBarView) convertView.findViewById(R.id.y_subject_roundProgressBar);
         bpbv.setProgress(20);
         return convertView;
     }

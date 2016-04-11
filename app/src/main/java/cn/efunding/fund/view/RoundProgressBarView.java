@@ -18,7 +18,7 @@ import cn.efunding.fund.R;
  *
  * @author qiejinkai
  */
-public class RoundPregressBarView extends View {
+public class RoundProgressBarView extends View {
     /**
      * 画笔对象的引用
      */
@@ -76,15 +76,15 @@ public class RoundPregressBarView extends View {
     public static final int STROKE = 0;
     public static final int FILL = 1;
 
-    public RoundPregressBarView(Context context) {
+    public RoundProgressBarView(Context context) {
         this(context, null);
     }
 
-    public RoundPregressBarView(Context context, AttributeSet attrs) {
+    public RoundProgressBarView(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public RoundPregressBarView(Context context, AttributeSet attrs, int defStyle) {
+    public RoundProgressBarView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         paint = new Paint();
         TypedArray mTypedArray = context.obtainStyledAttributes(attrs,
