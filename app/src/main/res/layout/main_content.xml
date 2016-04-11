@@ -1,24 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/fund_background"
+    android:orientation="vertical">
 
-    <include layout="@layout/banner_module"
+    <include
+        android:id="@+id/include"
+        layout="@layout/banner_module"
         android:layout_width="match_parent"
-        android:layout_marginTop="-0.5dp"
         android:layout_height="@dimen/banner_height"
         android:layout_alignParentTop="true"
-        android:id="@+id/include"></include>
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/x_listView">
-    </ListView>
-
-    <View android:layout_height="1px" android:background="@color/separate_line" android:layout_width="fill_parent"></View>
+        android:layout_marginTop="-0.5dp"></include>
 
     <ListView
+        android:id="@+id/x_listView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/y_listView"></ListView>
+        android:divider="@null"></ListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="3px"
+            android:layout_gravity="center_vertical|left"
+            android:background="@color/separate_line"></View>
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="定期理财"
+            android:textSize="12dp" />
+
+        <View
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="3px"
+            android:layout_gravity="center_vertical|right"
+            android:background="@color/separate_line"></View>
+
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/y_listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"></ListView>
 </LinearLayout>

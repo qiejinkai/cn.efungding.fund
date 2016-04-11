@@ -50,8 +50,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         xSubjectList= new ArrayList<XSubject>();
         xSubjectList.add(new XSubject("新手标 1 号"));
         xSubjectList.add(new XSubject("新手标 2 号"));
-        xSubjectList.add(new XSubject("新手标 3 号"));
-        xSubjectList.add(new XSubject("新手标 4 号"));
 
         ySubjectList = new ArrayList<YSubject>();
         ySubjectList.add(new YSubject("跃进宝 1 号"));

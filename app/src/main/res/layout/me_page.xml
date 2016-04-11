@@ -1,35 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fund="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context="cn.efunding.fund.activity.MeActivity">
 
-    <include layout="@layout/commen_bar"
+    <include
+        android:id="@+id/include5"
+        layout="@layout/commen_bar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/bar_height"
-        android:layout_alignParentTop="true"
-        android:id="@+id/include5"></include>
+        android:layout_alignParentTop="true"></include>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="this is me activity"
+
+    <cn.efunding.fund.view.RoundPregressBarView
+        android:id="@+id/roundProgressBar2"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        fund:roundColor="@color/fund_yellow"
+        fund:roundProgressColor="@color/fund_yellow"
+        fund:roundWidth="3px"
+        fund:textColor="@color/fund_yellow"
+        fund:textIsDisplayable="true"
+        fund:textSize="12dp"
+        fund:text="不限量"
+        android:layout_centerHorizontal="true"
         android:layout_below="@+id/include5"
-        android:layout_alignParentStart="true"
-        android:layout_above="@+id/include6"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/textView2" />
+        android:layout_above="@+id/include6" />
 
-    <include layout="@layout/commen_footer"
+    <include
+        android:id="@+id/include6"
+        layout="@layout/commen_footer"
         android:layout_width="match_parent"
         android:layout_height="@dimen/footer_height"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="@dimen/footer_marginTop"
         android:layout_marginBottom="@dimen/footer_marginBottom"
-        android:id="@+id/include6"></include>
+        android:layout_marginTop="@dimen/footer_marginTop"></include>
 
 
 </RelativeLayout>

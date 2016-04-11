@@ -199,7 +199,7 @@ public class HomeAdapter extends BaseAdapter implements ViewPager.OnPageChangeLi
 
         iv.setImageBitmap(readBitMap(context, image));
         iv.setScaleType(ImageView.ScaleType.CENTER);
-        iv.setAdjustViewBounds(true);
+        //iv.setAdjustViewBounds(true);
         iv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

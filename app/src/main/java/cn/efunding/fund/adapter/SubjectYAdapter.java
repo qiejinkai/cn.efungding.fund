@@ -12,6 +12,7 @@ import java.util.zip.Inflater;
 
 import cn.efunding.fund.R;
 import cn.efunding.fund.entity.YSubject;
+import cn.efunding.fund.view.RoundPregressBarView;
 
 /**
  * Created by qiejinkai on 16/4/7.
@@ -49,8 +50,11 @@ public class SubjectYAdapter extends BaseAdapter {
             convertView = layoutInflater.inflate(R.layout.subject_y_module,null);
         }
         YSubject ySubject = (YSubject)subjectYList.get(position);
-        TextView tv = (TextView) convertView.findViewById(R.id.y_subject_tv);
+        TextView tv = (TextView) convertView.findViewById(R.id.y_subject_tv_subject_name);
         tv.setText(ySubject.getTitle());
+
+        RoundPregressBarView bpbv = (RoundPregressBarView) convertView.findViewById(R.id.y_subject_roundProgressBar);
+        bpbv.setProgress(20);
         return convertView;
     }
 }
