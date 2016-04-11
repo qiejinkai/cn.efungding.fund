@@ -27,6 +27,8 @@
         <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="cn.efunding.fund.activity.intent.action.MainActivity"></action>
+
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".activity.MessageActivity">

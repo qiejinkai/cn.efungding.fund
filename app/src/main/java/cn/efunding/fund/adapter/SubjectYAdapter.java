@@ -52,6 +52,13 @@ public class SubjectYAdapter extends BaseAdapter {
         TextView tv = (TextView) convertView.findViewById(R.id.y_subject_tv_subject_name);
         tv.setText(ySubject.getTitle());
 
+        TextView yeild= (TextView) convertView.findViewById(R.id.y_subject_tv_yeild);
+        yeild.setTextColor(convertView.getResources().getColor(R.color.fund_red));
+        yeild.setText("20~25");
+
+        TextView percent= (TextView) convertView.findViewById(R.id.y_subject_tv_yeild_percent);
+        percent.setTextColor(convertView.getResources().getColor(R.color.fund_red));
+
         RoundProgressBarView bpbv = (RoundProgressBarView) convertView.findViewById(R.id.y_subject_roundProgressBar);
         bpbv.setProgress(20);
         return convertView;

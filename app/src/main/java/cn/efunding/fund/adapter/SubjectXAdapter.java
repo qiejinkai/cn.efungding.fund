@@ -56,6 +56,14 @@ public class SubjectXAdapter extends BaseAdapter {
         title.setTextColor(convertView.getResources().getColor(R.color.fund_white));
         TextView tCount = (TextView) convertView.findViewById(R.id.x_subject_tv_tCount);
         tCount.setTextColor(convertView.getResources().getColor(R.color.fund_white));
+
+        TextView yeild= (TextView) convertView.findViewById(R.id.x_subject_tv_yeild);
+        yeild.setTextColor(convertView.getResources().getColor(R.color.fund_yellow));
+        yeild.setText("20");
+
+
+        TextView percent= (TextView) convertView.findViewById(R.id.x_subject_tv_yeild_percent);
+        percent.setTextColor(convertView.getResources().getColor(R.color.fund_yellow));
         return convertView;
     }
 }

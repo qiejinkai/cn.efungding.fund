@@ -43,13 +43,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void initData(){
         bannerList= new ArrayList<Banner>();
-        bannerList.add(new Banner("http://fund.efunding.cn/",R.drawable.banner1));
-        bannerList.add(new Banner("http://fund.efunding.cn/",R.drawable.banner2));
-        bannerList.add(new Banner("http://fund.efunding.cn/",R.drawable.banner3));
+        bannerList.add(new Banner("http://fund.xiaogutou.cn/",R.drawable.banner1));
+        bannerList.add(new Banner("http://fund.xiaogutou.cn/",R.drawable.banner2));
+        bannerList.add(new Banner("http://fund.xiaogutou.cn/",R.drawable.banner3));
 
         xSubjectList= new ArrayList<XSubject>();
         xSubjectList.add(new XSubject("新手标 1 号"));
-        xSubjectList.add(new XSubject("新手标 2 号"));
 
         ySubjectList = new ArrayList<YSubject>();
         ySubjectList.add(new YSubject("跃进宝 1 号"));
