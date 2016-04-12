@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -44,16 +45,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void initData(){
         bannerList= new ArrayList<Banner>();
         bannerList.add(new Banner("http://fund.xiaogutou.cn/",R.drawable.banner1));
-        bannerList.add(new Banner("http://fund.xiaogutou.cn/",R.drawable.banner2));
-        bannerList.add(new Banner("http://fund.xiaogutou.cn/",R.drawable.banner3));
+        bannerList.add(new Banner("http://fund.xiaogutou.cn/", R.drawable.banner2));
+        bannerList.add(new Banner("http://fund.xiaogutou.cn/", R.drawable.banner3));
 
         xSubjectList= new ArrayList<XSubject>();
         xSubjectList.add(new XSubject("新手标 1 号"));
 
         ySubjectList = new ArrayList<YSubject>();
-        ySubjectList.add(new YSubject("跃进宝 1 号"));
-        ySubjectList.add(new YSubject("跃进宝 2 号"));
-        ySubjectList.add(new YSubject("跃进宝 3 号"));
+        ySubjectList.add(new YSubject("跃进宝 1 号",55));
+        ySubjectList.add(new YSubject("跃进宝 2 号", 73));
+        ySubjectList.add(new YSubject("跃进宝 3 号", 21));
     }
 
     @Override
@@ -64,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         initBar();
         initFooter();
         plv = (PullToRefreshListView) findViewById(R.id.lv);
-        HomeAdapter homeAdapter = new HomeAdapter(this,bannerList,xSubjectList,ySubjectList);
+        final HomeAdapter homeAdapter = new HomeAdapter(this,bannerList,xSubjectList,ySubjectList);
         plv.setAdapter(homeAdapter);
 
         plv.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener<ListView>() {
@@ -89,7 +90,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                         //xSubjectList.add(new XSubject("新手标 5 号"));
 
+                        //homeAdapter.getxAdapter().getSubjectXList().clear();
+                        homeAdapter.getxAdapter().getSubjectXList().get(0).setTitle("新手专享");
+                        homeAdapter.getxAdapter().getSubjectXList().add(new XSubject("新手标 2 号"));
+                        homeAdapter.getxAdapter().notifyDataSetChanged();
                         //ySubjectList.add(new YSubject("跃进宝 4 号"));
+
+
+                        homeAdapter.getY_subjectList().get(0).setPercent(33);
+                        homeAdapter.getY_subjectList().add(new YSubject("跃进宝 4 号", 99));
+                        homeAdapter.getyAdapter().notifyDataSetChanged();
+                        //plv.setAdapter(homeAdapter);
+
+                        homeAdapter.reFreshListViewHeight();
                         plv.onRefreshComplete();
                     }
                 }.execute();
@@ -173,4 +186,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
         }
     }
+
 }

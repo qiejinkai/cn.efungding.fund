@@ -7,6 +7,21 @@ public class YSubject {
 
     private String title ;
 
+    private int percent;
+
+    public YSubject(String title, int percent) {
+        this.title = title;
+        this.percent = percent;
+    }
+
+    public int getPercent() {
+        return percent;
+    }
+
+    public void setPercent(int percent) {
+        this.percent = percent;
+    }
+
     public YSubject(String title) {
         this.title = title;
     }

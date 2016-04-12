@@ -40,6 +40,22 @@ public class HomeAdapter extends BaseAdapter implements ViewPager.OnPageChangeLi
     private LayoutInflater layoutInflater;
     private Context context;
 
+    public List<XSubject> getX_subjectList() {
+        return x_subjectList;
+    }
+
+    public void setX_subjectList(List<XSubject> x_subjectList) {
+        this.x_subjectList = x_subjectList;
+    }
+
+    public List<YSubject> getY_subjectList() {
+        return y_subjectList;
+    }
+
+    public void setY_subjectList(List<YSubject> y_subjectList) {
+        this.y_subjectList = y_subjectList;
+    }
+
     public HomeAdapter(Context context ,List<Banner> bannerList, List<XSubject> x_sujectList, List<YSubject> y_subjectList ) {
         this.bannerList = bannerList;
         this.x_subjectList = x_sujectList;
@@ -80,10 +96,28 @@ public class HomeAdapter extends BaseAdapter implements ViewPager.OnPageChangeLi
     }
 
     private ListView y_listView ;
+    private SubjectYAdapter yAdapter;
+
+    public SubjectYAdapter getyAdapter() {
+        return yAdapter;
+    }
+
+    public void setyAdapter(SubjectYAdapter yAdapter) {
+        this.yAdapter = yAdapter;
+    }
+
+    public SubjectXAdapter getxAdapter() {
+        return xAdapter;
+    }
+
+    public void setxAdapter(SubjectXAdapter xAdapter) {
+        this.xAdapter = xAdapter;
+    }
+
     private void makeSubjectY(View convertView) {
         if(convertView != null){
             y_listView = (ListView) convertView.findViewById(R.id.y_listView);
-            SubjectYAdapter yAdapter = new SubjectYAdapter(convertView.getContext(),y_subjectList);
+            yAdapter = new SubjectYAdapter(convertView.getContext(),y_subjectList);
             y_listView.setAdapter(yAdapter);
             setListViewHeightBasedOnChildren(y_listView);
         }
@@ -91,15 +125,22 @@ public class HomeAdapter extends BaseAdapter implements ViewPager.OnPageChangeLi
 
 
     private ListView x_listView ;
+    private SubjectXAdapter xAdapter;
     private void makeSubjectX(View convertView) {
         if(convertView != null){
             x_listView = (ListView) convertView.findViewById(R.id.x_listView);
-            SubjectXAdapter xAdapter = new SubjectXAdapter(convertView.getContext(),x_subjectList);
+            xAdapter = new SubjectXAdapter(convertView.getContext(),x_subjectList);
             x_listView.setAdapter(xAdapter);
             setListViewHeightBasedOnChildren(x_listView);
             //x_listView
         }
 
+    }
+
+    //刷新两个list的高度
+    public void reFreshListViewHeight(){
+        setListViewHeightBasedOnChildren(x_listView);
+        setListViewHeightBasedOnChildren(y_listView);
     }
 
     public static void setListViewHeightBasedOnChildren(ListView listView) {
@@ -293,4 +334,6 @@ public class HomeAdapter extends BaseAdapter implements ViewPager.OnPageChangeLi
             return view == object;
         }
     }
+
+
 }

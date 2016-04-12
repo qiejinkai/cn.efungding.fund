@@ -60,7 +60,7 @@ public class SubjectYAdapter extends BaseAdapter {
         percent.setTextColor(convertView.getResources().getColor(R.color.fund_red));
 
         RoundProgressBarView bpbv = (RoundProgressBarView) convertView.findViewById(R.id.y_subject_roundProgressBar);
-        bpbv.setProgress(20);
+        bpbv.setProgress(ySubject.getPercent());
         return convertView;
     }
 }

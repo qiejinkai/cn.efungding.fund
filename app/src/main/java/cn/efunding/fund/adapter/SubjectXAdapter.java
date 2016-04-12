@@ -20,6 +20,14 @@ public class SubjectXAdapter extends BaseAdapter {
     private Context context;
     private List<XSubject> subjectXList;
 
+    public List<XSubject> getSubjectXList() {
+        return subjectXList;
+    }
+
+    public void setSubjectXList(List<XSubject> subjectXList) {
+        this.subjectXList = subjectXList;
+    }
+
     public SubjectXAdapter(Context context,List<XSubject>subjectXList ) {
         this.layoutInflater = LayoutInflater.from(context);
         this.subjectXList = subjectXList;
