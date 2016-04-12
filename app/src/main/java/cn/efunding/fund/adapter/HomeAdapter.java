@@ -17,6 +17,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
+import com.nostra13.universalimageloader.core.ImageLoader;
+
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
@@ -207,7 +209,7 @@ public class HomeAdapter extends BaseAdapter implements ViewPager.OnPageChangeLi
             for (Banner banner :bannerList) {
                 //Banner banner = (Banner)obj;
                 //System.out.println(banner.getImageId());
-                viewList.add(createImageView(banner.getImageId(),banner.getUrl(), context));
+                viewList.add(createImageView(banner.getSrcUrl(),banner.getImageId(),banner.getUrl(), context));
             }
 
             ll = (LinearLayout) convertView.findViewById(R.id.ll);
@@ -232,13 +234,13 @@ public class HomeAdapter extends BaseAdapter implements ViewPager.OnPageChangeLi
         return BitmapFactory.decodeStream(is,null,opt);
     }
 
-    private View createImageView(int image, final String url , final Context context){
+    private View createImageView(String srcUrl,int image, final String url , final Context context){
 
         LinearLayout root = new LinearLayout(context);
 
         ImageView iv = new ImageView(context);
 
-        iv.setImageBitmap(readBitMap(context, image));
+        //iv.setImageBitmap(readBitMap(context, image));
         iv.setScaleType(ImageView.ScaleType.CENTER);
         //iv.setAdjustViewBounds(true);
         iv.setOnClickListener(new View.OnClickListener() {
@@ -252,6 +254,7 @@ public class HomeAdapter extends BaseAdapter implements ViewPager.OnPageChangeLi
                 //context.overridePendingTransition(R.animator.in_from_right, R.animator.out_to_left);
             }
         });
+        ImageLoader.getInstance().displayImage(srcUrl,iv);
         root.addView(iv, LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
 
         return root;

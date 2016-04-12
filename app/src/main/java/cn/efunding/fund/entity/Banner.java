@@ -7,11 +7,21 @@ public class Banner {
 
     private String title;
     private String url;
+    private String srcUrl;
     private int imageId;
 
-    public Banner(String url, int imageId) {
+    public Banner(String url, int imageId,String srcUrl) {
         this.url = url;
+        this.srcUrl = srcUrl;
         this.imageId = imageId;
+    }
+
+    public String getSrcUrl() {
+        return srcUrl;
+    }
+
+    public void setSrcUrl(String srcUrl) {
+        this.srcUrl = srcUrl;
     }
 
     public String getTitle() {

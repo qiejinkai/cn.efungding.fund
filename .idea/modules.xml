@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/fund.iml" filepath="$PROJECT_DIR$/fund.iml" />
       <module fileurl="file://$PROJECT_DIR$/pullToRefresh/pullToRefresh.iml" filepath="$PROJECT_DIR$/pullToRefresh/pullToRefresh.iml" />
+      <module fileurl="file://$PROJECT_DIR$/universalImageLoader/universalImageLoader.iml" filepath="$PROJECT_DIR$/universalImageLoader/universalImageLoader.iml" />
     </modules>
   </component>
 </project>

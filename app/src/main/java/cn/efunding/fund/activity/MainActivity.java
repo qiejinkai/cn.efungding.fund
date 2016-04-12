@@ -44,9 +44,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void initData(){
         bannerList= new ArrayList<Banner>();
-        bannerList.add(new Banner("http://fund.xiaogutou.cn/",R.drawable.banner1));
-        bannerList.add(new Banner("http://fund.xiaogutou.cn/", R.drawable.banner2));
-        bannerList.add(new Banner("http://fund.xiaogutou.cn/", R.drawable.banner3));
+        bannerList.add(new Banner("http://fund.xiaogutou.cn/",R.drawable.banner1,"http://xh.eechou.com/image/2016-03-21/1646b56a0231228afca6f85ca11686af.jpg"));
+        bannerList.add(new Banner("http://fund.xiaogutou.cn/", R.drawable.banner2,"http://fund.xiaogutou.cn/image/2016-02-23/d6bc07ed16b57eb01d7c958d195eb83a.png"));
+        bannerList.add(new Banner("http://fund.xiaogutou.cn/", R.drawable.banner3,"http://fund.xiaogutou.cn/image/2016-02-23/d6bc07ed16b57eb01d7c958d195eb83a.png"));
 
         xSubjectList= new ArrayList<XSubject>();
         xSubjectList.add(new XSubject("新手标 1 号"));
