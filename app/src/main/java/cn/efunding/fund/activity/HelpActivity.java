@@ -61,17 +61,17 @@ public class HelpActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.btn_home:
                 startActivity(new Intent(HelpActivity.this, MainActivity.class));
-                //finish();
+                finish();
                 overridePendingTransition(R.animator.in_from_left, R.animator.out_to_left);
                 break;
             case R.id.btn_activity:
                 startActivity(new Intent(HelpActivity.this, ActivityActivity.class));
-                //finish();
+                finish();
                 overridePendingTransition(R.animator.in_from_left, R.animator.out_to_left);
                 break;
             case R.id.btn_me:
                 startActivity(new Intent(HelpActivity.this, MeActivity.class));
-                //finish();
+                finish();
                 overridePendingTransition(R.animator.in_from_left, R.animator.out_to_left);
                 break;
             case R.id.btn_help:

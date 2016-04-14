@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/fund_background"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/commen_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_height"
+        android:id="@+id/include"
+        android:layout_alignParentStart="true"></include>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:textColor="@color/fund_deep_gray"
+        android:text="1人投资 >"
+        android:id="@+id/toInvestors"
+        android:layout_below="@+id/include"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/subject_background"
+        android:id="@+id/imageView"
+        android:layout_below="@+id/toInvestors"
+        android:layout_alignParentStart="true">
+    </ImageView>
+
+    <View
+
+        android:layout_height="1dp"
+        android:background="@color/fund_white"
+        android:layout_width="70dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/line1"
+        android:layout_above="@+id/imageView"
+        android:layout_marginBottom="-17dp"></View>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/line2"
+        android:textAlignment="center"
+        android:text="预期年化"
+        android:textColor="@color/fund_white"
+        android:textSize="14dp"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textView3" />
+
+    <View
+
+        android:layout_height="1dp"
+        android:background="@color/fund_white"
+        android:layout_centerHorizontal="true"
+        android:layout_width="70dp"
+        android:id="@+id/line2"
+        android:layout_marginBottom="-20dp"
+        android:layout_above="@+id/line1"></View>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/textView3"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout4">
+
+        <TextView
+            android:layout_weight="19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="15"
+            android:textColor="@color/fund_white"
+            android:textSize="40dp"
+            android:id="@+id/subject_yeild" />
+
+        <TextView
+            android:layout_weight="18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="%"
+            android:textColor="@color/fund_white"
+            android:textSize="18dp"
+            android:id="@+id/textView2" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="锁定期15天"
+        android:textColor="@color/fund_white"
+        android:textSize="12dp"
+        android:layout_below="@+id/linearLayout4"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textView7" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_marginRight="10dp"
+        android:text="可投份额"
+        android:id="@+id/textView4"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="10000元"
+        android:textColor="@color/fund_red"
+        android:id="@+id/subject_permission_value"
+        android:layout_alignEnd="@+id/textView4"
+        android:layout_below="@+id/textView4" />
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="购买金额"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/textView6"
+        android:layout_below="@+id/subject_permission_value"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="无可用红包"
+        android:id="@+id/textView5"
+        android:layout_alignTop="@+id/textView6"
+        android:layout_alignEnd="@+id/subject_permission_value"
+        android:layout_alignBottom="@+id/textView6"
+        android:layout_alignStart="@+id/toInvestors" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:numeric="integer"
+        android:id="@+id/editText"
+        android:layout_below="@+id/textView5"
+        android:layout_toStartOf="@+id/textView4" />
+
+</RelativeLayout>

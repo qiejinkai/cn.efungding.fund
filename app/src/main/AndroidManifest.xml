@@ -38,12 +38,23 @@
 
             </meta-data>
         </activity>
-        <activity android:name=".activity.ActivityActivity"/>
+        <activity android:name=".activity.ActivityActivity">
+            <intent-filter>
+                <action android:name="cn.efunding.fund.activity.intent.action.ActivityActivity"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+        </activity>
         <activity android:name=".activity.MeActivity"/>
         <activity android:name=".activity.HelpActivity"/>
         <activity android:name=".activity.SettingsActivity"/>
         <activity android:name=".activity.Guide"/>
         <activity android:name=".activity.WebActivity"/>
+        <activity android:name=".activity.SubjectActivity">
+            <intent-filter>
+                <action android:name="cn.efunding.fund.activity.intent.action.SubjectActivity"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

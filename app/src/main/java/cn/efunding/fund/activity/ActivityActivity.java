@@ -1,41 +1,89 @@
 package cn.efunding.fund.activity;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.TextView;
 
+import com.handmark.pulltorefresh.library.PullToRefreshBase;
+import com.handmark.pulltorefresh.library.PullToRefreshListView;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import cn.efunding.fund.R;
+import cn.efunding.fund.adapter.ActivityAdapter;
+import cn.efunding.fund.entity.Activity;
+import cn.efunding.fund.entity.XSubject;
+import cn.efunding.fund.entity.YSubject;
 
 /**
  * Created by qiejinkai on 16/4/5.
  */
 public class ActivityActivity extends AppCompatActivity implements View.OnClickListener {
 
+    public static final String ACTION = "cn.efunding.fund.activity.intent.action.ActivityActivity";
+
     private int bar_title = R.string.bar_activity_title;
     private int [] footer_images = {R.drawable.home,R.drawable.activity_selected,R.drawable.me,R.drawable.help};
 
+    private PullToRefreshListView plv;
+
+    private List<Activity> activityList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_page);
         initBar();
         initFooter();
+        initActivity();
+        plv = (PullToRefreshListView) findViewById(R.id.plv);
 
-        Button btn = (Button) findViewById(R.id.btnToBanner);
-        btn.setOnClickListener(new View.OnClickListener() {
+        final ActivityAdapter activityAdapter = new ActivityAdapter(this,activityList);
+        plv.setAdapter(activityAdapter);
+        plv.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener<ListView>() {
             @Override
-            public void onClick(View v) {
-                startActivity(new Intent(ActivityActivity.this,Guide.class));
-                finish();;
+            public void onRefresh(PullToRefreshBase<ListView> refreshView) {
+
+                new AsyncTask<Void, Void, Void>() {
+
+                    @Override
+                    protected Void doInBackground(Void... params) {
+
+                        try {
+                            Thread.sleep(2000);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        return null;
+                    }
+
+                    @Override
+                    protected void onPostExecute(Void aVoid) {
+                        activityList.add(new Activity("http://fund.xiaogutou.cn/","http://xh.eechou.com/image/2016-03-21/1646b56a0231228afca6f85ca11686af.jpg"));
+                        activityAdapter.notifyDataSetChanged();
+                        plv.onRefreshComplete();
+                    }
+                }.execute();
             }
         });
-    }
 
+    }
+    private void initActivity(){
+        activityList = new ArrayList<Activity>();
+
+        activityList.add(new Activity("http://fund.xiaogutou.cn/","http://xh.eechou.com/image/2016-03-21/1646b56a0231228afca6f85ca11686af.jpg"));
+        activityList.add(new Activity("http://fund.xiaogutou.cn/", "http://fund.xiaogutou.cn/image/2016-02-23/d6bc07ed16b57eb01d7c958d195eb83a.png"));
+        activityList.add(new Activity("http://fund.xiaogutou.cn/", "http://fund.xiaogutou.cn/image/2016-02-23/d6bc07ed16b57eb01d7c958d195eb83a.png"));
+
+
+    }
     private void initBar(){
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("");
@@ -70,7 +118,7 @@ public class ActivityActivity extends AppCompatActivity implements View.OnClickL
         switch (v.getId()){
             case R.id.btn_home:
                 startActivity(new Intent(ActivityActivity.this, MainActivity.class));
-                //finish();
+                finish();
                 overridePendingTransition(R.animator.in_from_left,R.animator.out_to_left);
                 break;
             case R.id.btn_activity:
@@ -78,12 +126,12 @@ public class ActivityActivity extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.btn_me:
                 startActivity(new Intent(ActivityActivity.this, MeActivity.class));
-                //finish();
+                finish();
                 overridePendingTransition(R.animator.in_from_right,R.animator.out_to_left);
                 break;
             case R.id.btn_help:
                 startActivity(new Intent(ActivityActivity.this, HelpActivity.class));
-                //finish();
+                finish();
                 overridePendingTransition(R.animator.in_from_right,R.animator.out_to_left);
                 break;
         }

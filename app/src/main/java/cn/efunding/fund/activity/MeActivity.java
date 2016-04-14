@@ -84,12 +84,12 @@ public class MeActivity extends AppCompatActivity implements View.OnClickListene
         switch (v.getId()) {
             case R.id.btn_home:
                 startActivity(new Intent(MeActivity.this, MainActivity.class));
-                //finish();
+                finish();
                 overridePendingTransition(R.animator.in_from_left, R.animator.out_to_left);
                 break;
             case R.id.btn_activity:
                 startActivity(new Intent(MeActivity.this, ActivityActivity.class));
-                //finish();
+                finish();
                 overridePendingTransition(R.animator.in_from_left, R.animator.out_to_left);
                 break;
 
@@ -97,7 +97,7 @@ public class MeActivity extends AppCompatActivity implements View.OnClickListene
                 break;
             case R.id.btn_help:
                 startActivity(new Intent(MeActivity.this, HelpActivity.class));
-                //finish();
+                finish();
                 overridePendingTransition(R.animator.in_from_right, R.animator.out_to_left);
                 break;
         }

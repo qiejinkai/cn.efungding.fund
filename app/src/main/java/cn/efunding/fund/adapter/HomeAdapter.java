@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Adapter;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -25,10 +26,12 @@ import java.util.List;
 
 import cn.efunding.fund.R;
 import cn.efunding.fund.activity.MainActivity;
+import cn.efunding.fund.activity.SubjectActivity;
 import cn.efunding.fund.activity.WebActivity;
 import cn.efunding.fund.entity.Banner;
 import cn.efunding.fund.entity.XSubject;
 import cn.efunding.fund.entity.YSubject;
+import context.FundAppliaction;
 
 /**
  * Created by qiejinkai on 16/4/7.
@@ -122,6 +125,15 @@ public class HomeAdapter extends BaseAdapter implements ViewPager.OnPageChangeLi
             yAdapter = new SubjectYAdapter(convertView.getContext(),y_subjectList);
             y_listView.setAdapter(yAdapter);
             setListViewHeightBasedOnChildren(y_listView);
+            y_listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    Intent i = new Intent(SubjectActivity.ACTION);
+                    i.putExtra("title", y_subjectList.get(position).getTitle());
+                    context.startActivity(i);
+
+                }
+            });
         }
     }
 
@@ -135,6 +147,14 @@ public class HomeAdapter extends BaseAdapter implements ViewPager.OnPageChangeLi
             x_listView.setAdapter(xAdapter);
             setListViewHeightBasedOnChildren(x_listView);
             //x_listView
+            x_listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    Intent i = new Intent(SubjectActivity.ACTION);
+                    i.putExtra("title",x_subjectList.get(position).getTitle());
+                    context.startActivity(i);
+                }
+            });
         }
 
     }
@@ -254,7 +274,7 @@ public class HomeAdapter extends BaseAdapter implements ViewPager.OnPageChangeLi
                 //context.overridePendingTransition(R.animator.in_from_right, R.animator.out_to_left);
             }
         });
-        ImageLoader.getInstance().displayImage(srcUrl,iv);
+        ImageLoader.getInstance().displayImage(srcUrl,iv,((FundAppliaction)context.getApplicationContext()).getDisplayImageOptions());
         root.addView(iv, LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
 
         return root;

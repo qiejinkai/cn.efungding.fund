@@ -170,18 +170,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_activity:
                 startActivity(new Intent(MainActivity.this, ActivityActivity.class));
-                //finish();
+                finish();
                 overridePendingTransition(R.animator.in_from_right,R.animator.out_to_left);
 
                 break;
             case R.id.btn_me:
                 startActivity(new Intent(MainActivity.this, MeActivity.class));
-                //finish();
+                finish();
                 overridePendingTransition(R.animator.in_from_right,R.animator.out_to_left);
                 break;
             case R.id.btn_help:
                 startActivity(new Intent(MainActivity.this, HelpActivity.class));
-                //finish();
+                finish();
                 overridePendingTransition(R.animator.in_from_right,R.animator.out_to_left);
                 break;
         }
