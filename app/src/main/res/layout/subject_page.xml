@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="vertical">
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:background="@color/fund_background"
@@ -57,7 +61,7 @@
         android:layout_centerHorizontal="true"
         android:layout_width="70dp"
         android:id="@+id/line2"
-        android:layout_marginBottom="-20dp"
+        android:layout_marginBottom="-22dp"
         android:layout_above="@+id/line1"></View>
     <LinearLayout
         android:layout_width="match_parent"
@@ -100,7 +104,7 @@
         android:textSize="12dp"
         android:layout_below="@+id/linearLayout4"
         android:layout_alignParentStart="true"
-        android:id="@+id/textView7" />
+        android:id="@+id/lockdays" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -144,13 +148,345 @@
         android:layout_alignBottom="@+id/textView6"
         android:layout_alignStart="@+id/toInvestors" />
 
-    <EditText
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/textView6"
+        android:layout_marginRight="10dp"
+        android:layout_alignStart="@+id/textView6"
+        android:background="@color/white"
+        android:id="@+id/linearLayout5">
+
+
+
+        <Button
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:id="@+id/subtract"
+            android:textSize="33dp"
+            android:background="@null"/>
+
+
+        <View
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_height="match_parent"
+            android:background="@color/separate_line"
+            android:layout_centerHorizontal="true"
+            android:layout_width="1dp"
+            ></View>
+
+        <EditText
+            android:layout_weight="3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:singleLine="true"
+            android:numeric="integer"
+            android:gravity="center"
+            android:hint="100元起，请输入"
+            android:background="@null"
+            android:id="@+id/inputValue" />
+
+        <View
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:background="@color/separate_line"
+            android:layout_width="1dp"
+            ></View>
+
+        <Button
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:id="@+id/plus"
+            android:textSize="33dp"
+            android:background="@null"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:singleLine="true"
-        android:numeric="integer"
-        android:id="@+id/editText"
-        android:layout_below="@+id/textView5"
-        android:layout_toStartOf="@+id/textView4" />
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/linearLayout5"
+        android:id="@+id/linearLayout6"
+        android:layout_alignStart="@+id/linearLayout5">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_horizontal"
+            android:text="确认投资:￥"
+            android:id="@+id/textView7" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_horizontal"
+            android:text="-"
+            android:id="@+id/value"
+            android:layout_below="@+id/linearLayout5"
+            android:layout_alignStart="@+id/textView8" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/linearLayout6"
+        android:layout_alignStart="@+id/linearLayout6"
+        android:id="@+id/linearLayout7">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_horizontal"
+            android:text="预期收益:￥"
+            android:id="@+id/textView8" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_horizontal"
+            android:text="-"
+            android:textColor="@color/fund_red"
+            android:id="@+id/income"
+            android:layout_below="@+id/linearLayout5"
+            android:layout_alignStart="@+id/textView8" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="立即投资"
+        android:textSize="20dp"
+        android:textColor="@color/fund_white"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/submit"
+        android:layout_below="@+id/linearLayout7"
+        android:background="@drawable/button1"/>
+
+    <!--<TableLayout-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_below="@+id/submit">-->
+        <!--<TableRow-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!-->-->
+            <!--<TextView-->
+                <!--android:padding="10dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@drawable/table_frame_gray"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:text="产品类型"/>-->
+            <!--<TextView-->
+                <!--android:padding="10dp"-->
+                <!--android:layout_weight="2"-->
+                <!--android:background="@drawable/table_frame_gray"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:text="新手体验，活动"/>-->
+
+        <!--</TableRow>-->
+        <!--<TableRow-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!-->-->
+            <!--<TextView-->
+                <!--android:padding="10dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@drawable/table_frame_gray"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:text="期限"/>-->
+            <!--<TextView-->
+                <!--android:padding="10dp"-->
+                <!--android:layout_weight="2"-->
+                <!--android:background="@drawable/table_frame_gray"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:id="@+id/tb_closeDays"-->
+                <!--android:text="15天"/>-->
+
+        <!--</TableRow>-->
+        <!--<TableRow-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!-->-->
+            <!--<TextView-->
+                <!--android:padding="10dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@drawable/table_frame_gray"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:text="预期年化收益"/>-->
+            <!--<TextView-->
+                <!--android:padding="10dp"-->
+                <!--android:layout_weight="2"-->
+                <!--android:background="@drawable/table_frame_gray"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:id="@+id/tb_yeild"-->
+                <!--android:text="15.00%"/>-->
+
+        <!--</TableRow>-->
+        <!--<TableRow-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!-->-->
+            <!--<TextView-->
+                <!--android:padding="10dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@drawable/table_frame_gray"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:text="起投金额"/>-->
+            <!--<TextView-->
+                <!--android:padding="10dp"-->
+                <!--android:layout_weight="2"-->
+                <!--android:background="@drawable/table_frame_gray"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:id="@+id/tb_itemValue"-->
+                <!--android:text="100元"/>-->
+
+        <!--</TableRow>-->
+        <!--<TableRow-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!-->-->
+            <!--<TextView-->
+                <!--android:padding="10dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@drawable/table_frame_gray"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:text="计息时间"/>-->
+            <!--<TextView-->
+                <!--android:padding="10dp"-->
+                <!--android:layout_weight="2"-->
+                <!--android:background="@drawable/table_frame_gray"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:text="次日计息"/>-->
+
+        <!--</TableRow>-->
+
+        <!--<TableRow-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!-->-->
+            <!--<TextView-->
+                <!--android:padding="10dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@drawable/table_frame_gray"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:text="收益分配方式"/>-->
+            <!--<TextView-->
+                <!--android:padding="10dp"-->
+                <!--android:layout_weight="2"-->
+                <!--android:background="@drawable/table_frame_gray"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:text="到期还本付息"/>-->
+
+        <!--</TableRow>-->
+
+        <!--<TableRow-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!-->-->
+            <!--<TextView-->
+                <!--android:padding="10dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@drawable/table_frame_gray"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:text="到期时间"/>-->
+            <!--<TextView-->
+                <!--android:padding="10dp"-->
+                <!--android:layout_weight="2"-->
+                <!--android:background="@drawable/table_frame_gray"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:id="@+id/tb_closeDays2"-->
+                <!--android:text="投资日+15天"/>-->
+
+        <!--</TableRow>-->
+
+        <!--<TableRow-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!-->-->
+            <!--<TextView-->
+                <!--android:padding="10dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@drawable/table_frame_gray"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:text="保障方式"/>-->
+            <!--<TextView-->
+                <!--android:padding="10dp"-->
+                <!--android:layout_weight="2"-->
+                <!--android:background="@drawable/table_frame_gray"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:text="第三方担保"/>-->
+
+        <!--</TableRow>-->
+
+        <!--<TableRow-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!-->-->
+            <!--<TextView-->
+                <!--android:padding="10dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@drawable/table_frame_gray"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:text="规则介绍"/>-->
+            <!--<TextView-->
+                <!--android:padding="10dp"-->
+                <!--android:layout_weight="2"-->
+                <!--android:background="@drawable/table_frame_gray"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:text="100元100元100元100元100元100元100元100元100元100元100元100元100元"/>-->
+
+        <!--</TableRow>-->
+    <!--</TableLayout>-->
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/submit"
+        android:background="@null"
+        android:id="@+id/wv"></WebView>
 
 </RelativeLayout>
+    </ScrollView>
