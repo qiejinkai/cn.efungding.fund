@@ -13,6 +13,7 @@ import com.nostra13.universalimageloader.cache.memory.impl.WeakMemoryCache;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.nostra13.universalimageloader.core.assist.ImageScaleType;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 import com.nostra13.universalimageloader.core.download.BaseImageDownloader;
 import com.nostra13.universalimageloader.utils.StorageUtils;
@@ -81,12 +82,20 @@ public class FundAppliaction extends Application {
         initImageLoader();
     }
 
+    @Override
+    public void onLowMemory() {
+        super.onLowMemory();
+        ImageLoader.getInstance().clearMemoryCache();
+    }
+
+
+
     private void initImageLoader() {
         File cacheDir = StorageUtils.getOwnCacheDirectory(getApplicationContext(), cacheDirPath);
         ImageLoaderConfiguration config = new ImageLoaderConfiguration
                 .Builder(this)
                 .memoryCacheExtraOptions(480, 800) // max width, max height，即保存的每个缓存文件的最大长宽
-                .threadPoolSize(3)//线程池内加载的数量
+                .threadPoolSize(1)//线程池内加载的数量
                 .threadPriority(Thread.NORM_PRIORITY - 2)
                 .denyCacheImageMultipleSizesInMemory()
                 .memoryCache(new WeakMemoryCache()) // You can pass your own memory cache implementation/你可以通过自己的内存缓存实现
@@ -98,7 +107,7 @@ public class FundAppliaction extends Application {
                 .diskCache(new UnlimitedDiskCache(cacheDir))//自定义缓存路径
                 .defaultDisplayImageOptions(DisplayImageOptions.createSimple())
                 .imageDownloader(new BaseImageDownloader(this, 5 * 1000, 30 * 1000)) // connectTimeout (5 s), readTimeout (30 s)超时时间
-                .writeDebugLogs() // Remove for release app
+               // .writeDebugLogs() // Remove for release app
                 .build();//开始构建
 //        ImageLoaderConfiguration config = ImageLoaderConfiguration.createDefault(this);
 
@@ -109,10 +118,12 @@ public class FundAppliaction extends Application {
         DisplayImageOptions options = new DisplayImageOptions.Builder()
                 .bitmapConfig(Bitmap.Config.RGB_565)
                 .cacheOnDisk(true)
-                .cacheInMemory(false)
+                .imageScaleType(ImageScaleType.IN_SAMPLE_INT)
                 .build();
         return options;
     }
+
+
 
 
 }

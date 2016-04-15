@@ -3,17 +3,17 @@ package cn.efunding.fund.entity;
 /**
  * Created by qiejinkai on 16/4/12.
  */
-public class Activity {
+public class Article {
 
     private String url;
     private String imageUrl;
 
-    public Activity(String url, String imageUrl) {
+    public Article(String url, String imageUrl) {
         this.url = url;
         this.imageUrl = imageUrl;
     }
 
-    public Activity() {
+    public Article() {
     }
 
     public String getUrl() {

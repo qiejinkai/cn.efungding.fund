@@ -1,5 +1,6 @@
 package cn.efunding.fund.adapter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -21,6 +22,7 @@ import android.widget.ListView;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
 import java.io.InputStream;
+import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,6 +47,8 @@ public class HomeAdapter extends BaseAdapter implements ViewPager.OnPageChangeLi
     private LayoutInflater layoutInflater;
     private Context context;
 
+    WeakReference<Activity> activity;
+
     public List<XSubject> getX_subjectList() {
         return x_subjectList;
     }
@@ -61,12 +65,13 @@ public class HomeAdapter extends BaseAdapter implements ViewPager.OnPageChangeLi
         this.y_subjectList = y_subjectList;
     }
 
-    public HomeAdapter(Context context ,List<Banner> bannerList, List<XSubject> x_sujectList, List<YSubject> y_subjectList ) {
+    public HomeAdapter(Context context,List<Banner> bannerList, List<XSubject> x_sujectList, List<YSubject> y_subjectList ) {
         this.bannerList = bannerList;
         this.x_subjectList = x_sujectList;
         this.y_subjectList = y_subjectList;
         this.layoutInflater = LayoutInflater.from(context);;
         this.context = context;
+        activity = new WeakReference<Activity>((Activity)context);
     }
 
     @Override
@@ -131,6 +136,7 @@ public class HomeAdapter extends BaseAdapter implements ViewPager.OnPageChangeLi
                     Intent i = new Intent(SubjectActivity.ACTION);
                     i.putExtra("title", y_subjectList.get(position).getTitle());
                     context.startActivity(i);
+                    activity.get().finish();
 
                 }
             });
@@ -153,6 +159,7 @@ public class HomeAdapter extends BaseAdapter implements ViewPager.OnPageChangeLi
                     Intent i = new Intent(SubjectActivity.ACTION);
                     i.putExtra("title",x_subjectList.get(position).getTitle());
                     context.startActivity(i);
+                    activity.get().finish();
                 }
             });
         }
@@ -271,7 +278,7 @@ public class HomeAdapter extends BaseAdapter implements ViewPager.OnPageChangeLi
                 i.putExtra("from_action",MainActivity.ACTION);
                 context.startActivity(i);
                 //finish();
-                //context.overridePendingTransition(R.animator.in_from_right, R.animator.out_to_left);
+                activity.get().finish();
             }
         });
         ImageLoader.getInstance().displayImage(srcUrl,iv,((FundAppliaction)context.getApplicationContext()).getDisplayImageOptions());

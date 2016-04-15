@@ -13,15 +13,15 @@ import android.widget.TextView;
 
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.listener.PauseOnScrollListener;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import cn.efunding.fund.R;
 import cn.efunding.fund.adapter.ActivityAdapter;
-import cn.efunding.fund.entity.Activity;
-import cn.efunding.fund.entity.XSubject;
-import cn.efunding.fund.entity.YSubject;
+import cn.efunding.fund.entity.Article;
 
 /**
  * Created by qiejinkai on 16/4/5.
@@ -35,7 +35,7 @@ public class ActivityActivity extends AppCompatActivity implements View.OnClickL
 
     private PullToRefreshListView plv;
 
-    private List<Activity> activityList;
+    private List<Article> activityList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,21 +66,20 @@ public class ActivityActivity extends AppCompatActivity implements View.OnClickL
 
                     @Override
                     protected void onPostExecute(Void aVoid) {
-                        activityList.add(new Activity("http://fund.xiaogutou.cn/","http://xh.eechou.com/image/2016-03-21/1646b56a0231228afca6f85ca11686af.jpg"));
+                        activityList.add(new Article("http://fund.xiaogutou.cn/", "http://xh.eechou.com/image/2016-03-21/1646b56a0231228afca6f85ca11686af.jpg"));
                         activityAdapter.notifyDataSetChanged();
                         plv.onRefreshComplete();
                     }
                 }.execute();
             }
         });
+        plv.setOnScrollListener(new PauseOnScrollListener(ImageLoader.getInstance(), false, false));
 
     }
     private void initActivity(){
-        activityList = new ArrayList<Activity>();
+        activityList = new ArrayList<Article>();
 
-        activityList.add(new Activity("http://fund.xiaogutou.cn/","http://xh.eechou.com/image/2016-03-21/1646b56a0231228afca6f85ca11686af.jpg"));
-        activityList.add(new Activity("http://fund.xiaogutou.cn/", "http://fund.xiaogutou.cn/image/2016-02-23/d6bc07ed16b57eb01d7c958d195eb83a.png"));
-        activityList.add(new Activity("http://fund.xiaogutou.cn/", "http://fund.xiaogutou.cn/image/2016-02-23/d6bc07ed16b57eb01d7c958d195eb83a.png"));
+        activityList.add(new Article("http://fund.xiaogutou.cn/","http://xh.eechou.com/image/2016-03-21/1646b56a0231228afca6f85ca11686af.jpg"));
 
 
     }
@@ -135,5 +134,11 @@ public class ActivityActivity extends AppCompatActivity implements View.OnClickL
                 overridePendingTransition(R.animator.in_from_right,R.animator.out_to_left);
                 break;
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        ImageLoader.getInstance().clearMemoryCache();;
     }
 }
