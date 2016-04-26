@@ -29,6 +29,8 @@ public class FundAppliaction extends Application {
 
     private String password;
 
+    private boolean isLogin = false;
+
     private String token;
 
     private String cacheDirPath = "imageloader/Cache";
@@ -86,6 +88,10 @@ public class FundAppliaction extends Application {
     public void onLowMemory() {
         super.onLowMemory();
         ImageLoader.getInstance().clearMemoryCache();
+    }
+
+    public boolean isLogin(){
+        return this.isLogin;
     }
 
 

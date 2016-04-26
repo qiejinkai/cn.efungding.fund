@@ -1,5 +1,6 @@
 package cn.efunding.fund.activity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -35,7 +36,7 @@ public class SubjectActivity extends AppCompatActivity implements View.OnClickLi
     private int closeDays = 1;
 
     private String content ="<p style=\"text-align:center\">" +
-            "<img src=\"http://fund.xiaogutou.cn/image/20160224/1456289551855684.png\" title=\"1456289551855684.png\" " +
+            "<img src=\"/image/20160224/1456289551855684.png\" title=\"1456289551855684.png\" " +
             "alt=\"新手标详情页_1136x640-1---副本.png\" width=\"395\" " +
             "height=\"671\" style=\"width: 395px; height: 671px;\"></p>";
 
@@ -52,6 +53,7 @@ public class SubjectActivity extends AppCompatActivity implements View.OnClickLi
 
         WebView wv = (WebView) findViewById(R.id.wv);
 
+        handleContent();
         wv.loadData(content,"text/html","utf-8");
     }
 
@@ -97,13 +99,13 @@ public class SubjectActivity extends AppCompatActivity implements View.OnClickLi
             @Override
             public void afterTextChanged(Editable s) {
                 //String text = i;
-                if(beforeText!=null && beforeText.equals(inputEt.getText().toString()) ){
+                if (beforeText != null && beforeText.equals(inputEt.getText().toString())) {
                     return;
                 }
                 long value = getEtValue(inputEt.getText().toString());
 
-                if(value > 100){
-                    value = value%100==0?value:value-(value%100);
+                if (value > 100) {
+                    value = value % 100 == 0 ? value : value - (value % 100);
                     setValueText(value);
                 }
             }
@@ -129,6 +131,8 @@ public class SubjectActivity extends AppCompatActivity implements View.OnClickLi
             public void onClick(View v) {
                 startActivity(new Intent(SubjectActivity.this, MainActivity.class));
                 finish();
+                overridePendingTransition(R.animator.in_from_left_500, R.animator.out_to_left);
+
             }
         });
         setSupportActionBar(toolbar);
@@ -225,6 +229,17 @@ public class SubjectActivity extends AppCompatActivity implements View.OnClickLi
         }
 
         //return "";
+    }
+
+    private void handleContent(){
+        if(content == null || "".equals(content)){
+            return;
+        }
+
+        content = content.replaceAll("<img src=\"/","<img src=\"http://fund.xiaogutou.cn/");
+
+        //System.out.println(content);
+
     }
 
 

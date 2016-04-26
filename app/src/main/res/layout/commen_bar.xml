@@ -23,7 +23,7 @@
             android:layout_gravity="left"
             android:drawableLeft="@drawable/back"
             android:textSize="18dp"
-            android:text="@string/back"
+            android:text=""
             android:id="@+id/btn_back_main"
             android:textColor="@color/fund_white"
             android:background="#00000000" />

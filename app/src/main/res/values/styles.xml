@@ -11,5 +11,11 @@
     <style name="fundActionTheme" parent="Theme.AppCompat.Light.NoActionBar">
     </style>
 
+    <style name="fundCheckBox" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox</item>
+        <item name="android:paddingLeft">15.0dip</item>
+        <item name="android:maxHeight">10.0dip</item>
+    </style>
+
 
 </resources>

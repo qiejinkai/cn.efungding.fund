@@ -9,9 +9,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import cn.efunding.fund.R;
+import context.FundAppliaction;
 
 /**
  * Created by qiejinkai on 16/4/5.
@@ -24,9 +26,44 @@ public class MeActivity extends AppCompatActivity implements View.OnClickListene
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        FundAppliaction context = (FundAppliaction)getApplicationContext();
+
+        if(!context.isLogin()){
+            startActivity(new Intent(MeActivity.this,UserActivity.class));
+            return;
+        }
         setContentView(R.layout.me_page);
         initBar();
         initFooter();
+        initPage();
+    }
+
+    private void initPage(){
+        TextView tv9 = (TextView) findViewById(R.id.textView9);
+        tv9.setTextColor(getResources().getColor(R.color.fund_white));
+        TextView total = (TextView) findViewById(R.id.total);
+        total.setTextColor(getResources().getColor(R.color.fund_white));
+        TextView tv1 = (TextView) findViewById(R.id.textView1);
+        tv1.setTextColor(getResources().getColor(R.color.fund_white));
+        TextView tv2 = (TextView) findViewById(R.id.textView2);
+        tv2.setTextColor(getResources().getColor(R.color.fund_white));
+        TextView investValue = (TextView) findViewById(R.id.investValue);
+        investValue.setTextColor(getResources().getColor(R.color.fund_white));
+        TextView balance = (TextView) findViewById(R.id.balance);
+        balance.setTextColor(getResources().getColor(R.color.fund_white));
+
+
+        Button withdraw = (Button) findViewById(R.id.withdraw);
+        withdraw.setTextColor(getResources().getColor(R.color.fund_white));
+        Button recharge = (Button) findViewById(R.id.recharge);
+        recharge.setTextColor(getResources().getColor(R.color.fund_white));
+
+
+        LinearLayout subject_y_linearLayout = (LinearLayout) findViewById(R.id.subject_y_linearLayout);
+        subject_y_linearLayout.setOnClickListener(this);
+        LinearLayout subject_x_linearLayout =  (LinearLayout) findViewById(R.id.subject_x_linearLayout);
+        subject_x_linearLayout.setOnClickListener(this);
     }
 
     private void initBar(){
@@ -99,6 +136,17 @@ public class MeActivity extends AppCompatActivity implements View.OnClickListene
                 startActivity(new Intent(MeActivity.this, HelpActivity.class));
                 finish();
                 overridePendingTransition(R.animator.in_from_right, R.animator.out_to_left);
+                break;
+            case R.id.subject_y_linearLayout:
+                startActivity(new Intent(MeActivity.this,MyYSubjectActivity.class));
+                finish();
+                overridePendingTransition(R.animator.in_from_right_500, R.animator.out_to_left);
+
+                break;
+            case R.id.subject_x_linearLayout:
+                startActivity(new Intent(MeActivity.this,MyXSubjectActivity.class));
+                finish();
+                overridePendingTransition(R.animator.in_from_right_500, R.animator.out_to_left);
                 break;
         }
     }

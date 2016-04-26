@@ -135,8 +135,10 @@ public class HomeAdapter extends BaseAdapter implements ViewPager.OnPageChangeLi
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     Intent i = new Intent(SubjectActivity.ACTION);
                     i.putExtra("title", y_subjectList.get(position).getTitle());
-                    context.startActivity(i);
-                    activity.get().finish();
+                    ((Activity)context).startActivity(i);
+                    ((Activity)context).finish();
+                    ((Activity)context).overridePendingTransition(R.animator.in_from_right_500, R.animator.out_to_left);
+
 
                 }
             });
@@ -158,8 +160,10 @@ public class HomeAdapter extends BaseAdapter implements ViewPager.OnPageChangeLi
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     Intent i = new Intent(SubjectActivity.ACTION);
                     i.putExtra("title",x_subjectList.get(position).getTitle());
-                    context.startActivity(i);
-                    activity.get().finish();
+                    ((Activity)context).startActivity(i);
+                    ((Activity)context).finish();
+                    ((Activity)context).overridePendingTransition(R.animator.in_from_right_500, R.animator.out_to_left);
+
                 }
             });
         }
@@ -276,9 +280,10 @@ public class HomeAdapter extends BaseAdapter implements ViewPager.OnPageChangeLi
                 Intent i = new Intent(context, WebActivity.class);
                 i.putExtra("url",url);
                 i.putExtra("from_action",MainActivity.ACTION);
-                context.startActivity(i);
-                //finish();
-                activity.get().finish();
+                ((Activity)context).startActivity(i);
+                ((Activity)context).finish();
+                ((Activity)context).overridePendingTransition(R.animator.in_from_right_500, R.animator.out_to_left);
+
             }
         });
         ImageLoader.getInstance().displayImage(srcUrl,iv,((FundAppliaction)context.getApplicationContext()).getDisplayImageOptions());

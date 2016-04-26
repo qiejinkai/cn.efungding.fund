@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/commen_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_height"
+        android:layout_alignParentTop="true"
+        android:id="@+id/include"></include>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/fund_red">
+
+
+        <EditText
+            android:textScaleX="1.3"
+            android:paddingLeft="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/editsharp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textSize="16dp"
+            android:inputType="phone"
+            android:hint="输入您的手机号"
+            android:drawableLeft="@drawable/phone"
+            android:ems="10"
+            android:id="@+id/phone"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:paddingLeft="5dp"
+                android:background="@drawable/editsharp"
+                android:drawableLeft="@drawable/verify"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="40dp"
+                android:layout_width="140dp"
+                android:hint="输入验证码"
+                android:textSize="16dp"
+                android:textScaleX="1.3"
+                android:layout_height="40dp"
+                android:id="@+id/verifyCode"
+                android:layout_weight="0.07" />
+            <ImageView
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:id="@+id/verifyCodeImage"/>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginRight="20dp"
+            android:layout_gravity="center_horizontal|right"
+            android:textColor="@color/fund_white"
+            android:textSize="12dp"
+            android:background="@null"
+            android:text="看不清换一张"
+            android:id="@+id/btnChangeImage" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="下一步"
+        android:background="@drawable/button1"
+        android:textSize="20dp"
+        android:textColor="@color/fund_white"
+        android:id="@+id/btnNext"
+        android:layout_gravity="center_horizontal"
+        android:clickable="true" />
+
+    <Button
+        android:layout_marginTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="已有账户，去登录"
+        android:textSize="16dp"
+        android:textColor="@color/fund_red"
+        android:background="@null"
+        android:id="@+id/btnToLogin"
+        android:layout_gravity="center_horizontal" />
+
+
+</LinearLayout>

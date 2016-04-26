@@ -7,6 +7,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import cn.efunding.fund.R;
@@ -18,13 +19,26 @@ public class HelpActivity extends AppCompatActivity implements View.OnClickListe
 
     private int bar_title = R.string.bar_help_title;
     private int [] footer_images = {R.drawable.home,R.drawable.activity,R.drawable.me,R.drawable.help_selected};
-
+    public static final String ACTION = "cn.efunding.fund.activity.intent.action.HelpActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.help_page);
         initBar();
         initFooter();
+        initPage();
+    }
+    private void initPage(){
+        LinearLayout question = (LinearLayout) findViewById(R.id.question);
+        question.setOnClickListener(this);
+        LinearLayout feedback =  (LinearLayout) findViewById(R.id.feedback);
+        feedback.setOnClickListener(this);
+        LinearLayout webcat = (LinearLayout) findViewById(R.id.webcat);
+        webcat.setOnClickListener(this);
+        LinearLayout about = (LinearLayout) findViewById(R.id.about);
+        about.setOnClickListener(this);
+        LinearLayout controller = (LinearLayout) findViewById(R.id.controller);
+        controller.setOnClickListener(this);
     }
 
     private void initBar(){
@@ -75,6 +89,31 @@ public class HelpActivity extends AppCompatActivity implements View.OnClickListe
                 overridePendingTransition(R.animator.in_from_left, R.animator.out_to_left);
                 break;
             case R.id.btn_help:
+                break;
+            case R.id.question:
+                startActivity(new WebActivityIntent(HelpActivity.this,WebActivity.class,HelpActivity.ACTION,R.string.base_url_question,"常见问题"));
+                finish();
+                overridePendingTransition(R.animator.in_from_right_500, R.animator.out_to_left);
+                break;
+            case R.id.feedback:
+                startActivity(new WebActivityIntent(HelpActivity.this,WebActivity.class,HelpActivity.ACTION,R.string.base_url_webcat));
+                finish();
+                overridePendingTransition(R.animator.in_from_right_500, R.animator.out_to_left);
+                break;
+            case R.id.webcat:
+                startActivity(new WebActivityIntent(HelpActivity.this,WebActivity.class,HelpActivity.ACTION,R.string.base_url_webcat,"微信客服"));
+                finish();
+                overridePendingTransition(R.animator.in_from_right_500, R.animator.out_to_left);
+                break;
+            case R.id.about:
+                startActivity(new WebActivityIntent(HelpActivity.this,WebActivity.class,HelpActivity.ACTION,R.string.base_url_about,"关于小骨头"));
+                finish();
+                overridePendingTransition(R.animator.in_from_right_500, R.animator.out_to_left);
+                break;
+            case R.id.controller:
+                startActivity(new WebActivityIntent(HelpActivity.this,WebActivity.class,HelpActivity.ACTION,R.string.base_url_controller,"风险控制"));
+                finish();
+                overridePendingTransition(R.animator.in_from_right_500, R.animator.out_to_left);
                 break;
         }
     }

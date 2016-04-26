@@ -67,9 +67,9 @@ public class ActivityAdapter extends BaseAdapter {
                 Intent i = new Intent(context, WebActivity.class);
                 i.putExtra("url",article.getUrl());
                 i.putExtra("from_action", ActivityActivity.ACTION);
-                context.startActivity(i);
-                //finish();
-                //context.overridePendingTransition(R.animator.in_from_right, R.animator.out_to_left);
+                ((Activity)context).startActivity(i);
+                ((Activity)context).finish();
+                ((Activity)context).overridePendingTransition(R.animator.in_from_right_500, R.animator.out_to_left);
                 activity.get().finish();
             }
         });

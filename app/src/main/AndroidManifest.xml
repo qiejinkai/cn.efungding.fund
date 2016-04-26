@@ -45,7 +45,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.MeActivity"/>
-        <activity android:name=".activity.HelpActivity"/>
+        <activity android:name=".activity.HelpActivity">
+            <intent-filter>
+                <action android:name="cn.efunding.fund.activity.intent.action.HelpActivity"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+        </activity>
         <activity android:name=".activity.SettingsActivity"/>
         <activity android:name=".activity.WebActivity"/>
         <activity android:name=".activity.SubjectActivity">
@@ -54,6 +59,10 @@
                 <category android:name="android.intent.category.DEFAULT"></category>
             </intent-filter>
         </activity>
+        <activity android:name=".activity.MyYSubjectActivity"></activity>
+        <activity android:name=".activity.MyXSubjectActivity"></activity>
+        <activity android:name=".activity.UserActivity"></activity>
+
     </application>
 
 </manifest>
