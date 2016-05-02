@@ -102,7 +102,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:id="@+id/l1"
+        android:id="@+id/service"
         android:layout_below="@+id/v7"
         android:layout_alignParentStart="true"
         android:background="@color/white"
@@ -130,7 +130,7 @@
         android:layout_marginLeft="20dp"
         android:layout_height="3px"
         android:id="@+id/v8"
-        android:layout_below="@+id/l1"
+        android:layout_below="@+id/service"
         android:background="@color/separate_line"></View>
 
     <LinearLayout

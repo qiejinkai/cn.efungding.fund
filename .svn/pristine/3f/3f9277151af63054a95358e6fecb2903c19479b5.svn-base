@@ -1,0 +1,270 @@
+[
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/checkbox.xml",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/src/main/res/drawable/checkbox.xml"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/message.png",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/src/main/res/drawable/message.png"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/logo.png",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/src/main/res/drawable/logo.png"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/abc_edit_text_material.xml",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0-alpha1/res/drawable/abc_edit_text_material.xml"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_small_material.xml",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0-alpha1/res/drawable/abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0-alpha1/res/drawable/abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0-alpha1/res/drawable/abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/verify.png",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/src/main/res/drawable/verify.png"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_light.xml",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0-alpha1/res/drawable/abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_dark.xml",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0-alpha1/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/banner1.png",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/src/main/res/drawable/banner1.png"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/abc_btn_default_mtrl_shape.xml",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0-alpha1/res/drawable/abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_indicator_material.xml",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0-alpha1/res/drawable/abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/home_selected.png",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/src/main/res/drawable/home_selected.png"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_top_material.xml",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0-alpha1/res/drawable/abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/abc_btn_borderless_material.xml",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0-alpha1/res/drawable/abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/login_point_selected.png",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/src/main/res/drawable/login_point_selected.png"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/identity.png",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/src/main/res/drawable/identity.png"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/abc_btn_colored_material.xml",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0-alpha1/res/drawable/abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_tick_mark_material.xml",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0-alpha1/res/drawable/abc_seekbar_tick_mark_material.xml"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/abc_text_cursor_material.xml",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0-alpha1/res/drawable/abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/to_right.png",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/src/main/res/drawable/to_right.png"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/activity.png",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/src/main/res/drawable/activity.png"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/abc_btn_check_material.xml",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0-alpha1/res/drawable/abc_btn_check_material.xml"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/settings.png",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/src/main/res/drawable/settings.png"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/abc_btn_radio_material.xml",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0-alpha1/res/drawable/abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_light.xml",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0-alpha1/res/drawable/abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/subject_background.png",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/src/main/res/drawable/subject_background.png"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/home.png",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/src/main/res/drawable/home.png"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/help_selected.png",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/src/main/res/drawable/help_selected.png"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/wenhao.png",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/src/main/res/drawable/wenhao.png"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/indicator_bg_top.xml",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/exploded-aar/fund/pullToRefresh/unspecified/res/drawable/indicator_bg_top.xml"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/me_selected.png",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/src/main/res/drawable/me_selected.png"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/login_point.png",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/src/main/res/drawable/login_point.png"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/abc_spinner_textfield_background_material.xml",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0-alpha1/res/drawable/abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/activity_selected.png",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/src/main/res/drawable/activity_selected.png"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/chilun.jpeg",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/src/main/res/drawable/chilun.jpeg"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/banner3.png",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/src/main/res/drawable/banner3.png"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/button2.png",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/src/main/res/drawable/button2.png"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/me.png",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/src/main/res/drawable/me.png"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/bindback.png",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/src/main/res/drawable/bindback.png"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_thumb_material.xml",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0-alpha1/res/drawable/abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/back.png",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/src/main/res/drawable/back.png"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/button1.png",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/src/main/res/drawable/button1.png"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_dark.xml",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0-alpha1/res/drawable/abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/phone_white.png",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/src/main/res/drawable/phone_white.png"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/banner2.png",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/src/main/res/drawable/banner2.png"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/soild.xml",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/src/main/res/drawable/soild.xml"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/loading.gif",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/src/main/res/drawable/loading.gif"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/editsharp.xml",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/src/main/res/drawable/editsharp.xml"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/abc_textfield_search_material.xml",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0-alpha1/res/drawable/abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/key.png",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/src/main/res/drawable/key.png"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/welcome_page.jpg",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/src/main/res/drawable/welcome_page.jpg"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/help.png",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/src/main/res/drawable/help.png"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_track_material.xml",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0-alpha1/res/drawable/abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_light.xml",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0-alpha1/res/drawable/abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/checkbox_selected.png",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/src/main/res/drawable/checkbox_selected.png"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background.xml",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0-alpha1/res/drawable/abc_dialog_material_background.xml"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/indicator_bg_bottom.xml",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/exploded-aar/fund/pullToRefresh/unspecified/res/drawable/indicator_bg_bottom.xml"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/checkbox_normal.png",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/src/main/res/drawable/checkbox_normal.png"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/recharge.png",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/src/main/res/drawable/recharge.png"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_internal_bg.xml",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0-alpha1/res/drawable/abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_full_material.xml",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0-alpha1/res/drawable/abc_ratingbar_full_material.xml"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/textsharp.xml",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/src/main/res/drawable/textsharp.xml"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0-alpha1/res/drawable/abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/phone.png",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/src/main/res/drawable/phone.png"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/drawable/table_frame_gray.xml",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/src/main/res/drawable/table_frame_gray.xml"
+    }
+]

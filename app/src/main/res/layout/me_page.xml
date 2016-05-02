@@ -252,7 +252,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:id="@+id/question"
+        android:id="@+id/identity"
         android:layout_below="@+id/v4"
         android:layout_alignParentStart="true"
         android:background="@color/white"
@@ -279,13 +279,13 @@
         android:layout_marginLeft="20dp"
         android:layout_height="3px"
         android:id="@+id/v5"
-        android:layout_below="@+id/question"
+        android:layout_below="@+id/identity"
         android:background="@color/separate_line"></View>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:id="@+id/feedback"
+        android:id="@+id/bankcard"
         android:layout_below="@+id/v5"
         android:layout_alignParentStart="true"
         android:background="@color/white"
@@ -311,7 +311,7 @@
         android:layout_width="match_parent"
         android:layout_height="3px"
         android:id="@+id/v6"
-        android:layout_below="@+id/feedback"
+        android:layout_below="@+id/bankcard"
         android:background="@color/separate_line"></View>
 
 

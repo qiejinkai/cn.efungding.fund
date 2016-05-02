@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/commen_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_height"
+        android:layout_alignParentTop="true"
+        android:id="@+id/include"></include>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/fund_red">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/phone_white"/>
+            
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="13051701098"
+                android:id="@+id/phoneNum"
+                android:textColor="@color/fund_white"
+                android:textSize="18dp"/>
+
+            <Button
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@null"
+                android:textSize="18dp"
+                android:text="修改"
+                android:id="@+id/modify"
+                android:textColor="@color/fund_white"
+                android:gravity="center_vertical|right"
+                android:layout_gravity="center_vertical|right"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:paddingLeft="5dp"
+                android:background="@drawable/editsharp"
+
+                android:drawableLeft="@drawable/verify"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="40dp"
+                android:layout_width="200dp"
+                android:hint="输入验证码"
+                android:textSize="16dp"
+                android:textScaleX="1.3"
+                android:layout_gravity="center"
+                android:layout_height="40dp"
+                android:id="@+id/verifyCode" />
+            <TextView
+                android:layout_gravity="center"
+                android:background="@drawable/textsharp"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/timer"/>
+        </LinearLayout>
+
+        <EditText
+            android:textScaleX="1.3"
+            android:paddingLeft="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/editsharp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textSize="16dp"
+            android:inputType="textPassword"
+            android:hint="输入您的密码"
+            android:drawableLeft="@drawable/key"
+            android:ems="10"
+            android:id="@+id/password"/>
+
+
+        <EditText
+            android:textScaleX="1.3"
+            android:paddingLeft="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/editsharp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textSize="16dp"
+            android:inputType="phone"
+            android:hint="推荐人手机号码（选填）"
+            android:drawableLeft="@drawable/phone"
+            android:ems="10"
+            android:id="@+id/phone"/>
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="20dp"
+            style="@style/fundCheckBox"
+            android:text="我同意《小股投资用户服务协议》"
+            android:textColor="@color/fund_white"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:id="@+id/checkbox"
+            android:singleLine="false"
+            android:allowUndo="false" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="注 册"
+        android:background="@drawable/button1"
+        android:textSize="20dp"
+        android:textColor="@color/fund_white"
+        android:id="@+id/register"
+        android:layout_gravity="center_horizontal" />
+
+
+</LinearLayout>

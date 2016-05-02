@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/menu/main.xml",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/src/main/res/menu/main.xml"
+    },
+    {
+        "merged": "/Users/qiejinkai/AndroidTest/fund/app/build/intermediates/res/merged/debug/menu/me.xml",
+        "source": "/Users/qiejinkai/AndroidTest/fund/app/src/main/res/menu/me.xml"
+    }
+]

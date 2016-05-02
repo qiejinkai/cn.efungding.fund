@@ -9,6 +9,8 @@
     <string name="back">返回</string>
 
 
+    <string name="domain">http://fund.eechou.com</string>
+
     <string name="pull_to_refresh">下拉可以刷新</string>
     <string name="release_to_refresh">释放立即刷新</string>
     <string name="refreshing">正在刷新…</string>
@@ -16,8 +18,19 @@
     <string name="updated_at">上次更新于%1$s前</string>
     <string name="updated_just_now">刚刚更新</string>
     <string name="time_error">时间有问题</string>
-    <string name="base_url_question">http://fund.xiaogutou.cn/help/problem/</string>
-    <string name="base_url_webcat">http://fund.xiaogutou.cn/help/wechat/</string>
-    <string name="base_url_about">http://fund.xiaogutou.cn/about/</string>
-    <string name="base_url_controller">http://fund.xiaogutou.cn/help/risk/</string>
+    <string name="base_url_question">/help/problem/</string>
+    <string name="base_url_webcat">/help/wechat/</string>
+    <string name="base_url_about">/about/</string>
+    <string name="base_url_controller">/help/risk/</string>
+    <string name="base_url_verifycode">/api/fund/user/register/phone/verifycode?r=</string>
+    <string name="base_url_banner">/app/article/query?column=banner&amp;p=1&amp;size=999</string>
+    <string name="base_url_device_join">/app/device/join?</string>
+    <string name="base_url_query_xsubject">/api/fund/subject/x/query?</string>
+    <string name="base_url_query_ysubject">/api/fund/subject/y/query?</string>
+    <string name="base_url_query_home">/app/home/get?p=1&amp;size=999</string>
+    <string name="base_url_join_code">/app/join/code?did={did}</string>
+    <string name="base_url_join_smscode">/app/join/smscode?</string>
+    <string name="base_url_join_resmscode">/app/join/resmscode?</string>
+    <string name="base_url_join_join">/app/join/join?</string>
+    <string name="base_url_login">/app/login/login?</string>
 </resources>

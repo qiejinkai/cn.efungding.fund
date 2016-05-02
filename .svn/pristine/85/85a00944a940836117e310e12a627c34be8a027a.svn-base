@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.efunding.fund.activity.ActivityActivity">
+
+    <include
+        android:id="@+id/include7"
+        layout="@layout/commen_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_height"
+        android:layout_alignParentTop="true"></include>
+
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/plv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/include8"
+        android:layout_below="@+id/include7"
+        android:layout_marginTop="-1.5dp">
+
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+    <include
+        android:id="@+id/include8"
+        layout="@layout/commen_footer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/footer_height"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/footer_marginBottom"
+        android:layout_marginTop="@dimen/footer_marginTop"></include>
+
+
+</RelativeLayout>
